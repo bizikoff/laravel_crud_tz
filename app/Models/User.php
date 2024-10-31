@@ -46,6 +46,10 @@ class User extends Authenticatable
         ];
     }
 
+    /**
+     * Getting created_at field in the following format "Dec 31, 2002"
+     * @return string
+     */
     public function getDateAttribute(): string
     {
         return $this->created_at->toFormattedDateString();
